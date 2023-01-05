@@ -1,33 +1,94 @@
-import React, { Component } from 'react';
-
-class Board extends Component {
+class Board extends React.Component {
   renderSquare(i) {
-    const color = (i % 2 === 0) ? 'white' : 'black';
-    const style = {
-      backgroundColor: color,
-      width: '12.5%',
-      height: '12.5%',
-    };
-
-    return (
-      <div style={style}>
-        {i}
-      </div>
-    );
+    return <Square />;
   }
 
   render() {
-    const squares = [];
-    for (let i = 0; i < 64; i++) {
-      squares.push(this.renderSquare(i));
-    }
-
     return (
-      <div style={{display: 'flex', flexWrap: 'wrap'}}>
-        {squares}
+      <div>
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(8)}
+          {this.renderSquare(9)}
+          {this.renderSquare(10)}
+          {this.renderSquare(11)}
+          {this.renderSquare(12)}
+          {this.renderSquare(13)}
+          {this.renderSquare(14)}
+          {this.renderSquare(15)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
       </div>
+                <div className="board-row">
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+      </div>
+                <div className="board-row">
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+      </div>
+                <div className="board-row">
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+      </div>
+                <div className="board-row">
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+          {this.renderSquare(2)}
+      </div>
+        
+        </div>
     );
   }
 }
-
-export default Board;
